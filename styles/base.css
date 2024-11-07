@@ -59,7 +59,11 @@ footer {
     display: block;
     /* background-color: rgb(230, 225, 225); */
     background-color: var(--secondary-background-color);
-    border-radius: 20px;
+    border-radius: 25px;
     margin: 0.5rem;
-    padding: 0.75rem;
+    padding: 1rem;
+}
+
+.card h2 {
+    text-align: center;
 }
