@@ -25,6 +25,7 @@ nav {
     background-color: black;
     display: flex;
     justify-content: center;
+    padding: .3rem;
 }
 
 nav a {
@@ -35,14 +36,10 @@ nav a {
     text-align: center;
     padding: 0.5rem;
     flex: 1 1 100%;
-    outline-color: gray;
-    outline-style: solid;
-    outline-width: 1px;
-    transition: color 0.3s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
 nav a:hover {
-    box-shadow: inset 1000px 0 0 0 #54b3d6;
+    text-decoration: underline 1px;
     color: white;
 }
 
@@ -82,4 +79,5 @@ footer p {
 
 .card h2 {
     text-align: center;
+    color: white;
 }
