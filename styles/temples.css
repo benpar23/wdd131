@@ -1,8 +1,8 @@
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  } */
+* {
+    font-family: "Lato", sans-serif;
+  }
+
+
 
 header {
     display: flex;
@@ -14,12 +14,17 @@ header {
     color: white;
 }
 
+h1 {
+    padding-left: 2rem;
+}
+
 nav {
     flex-grow: 1;
     display: flex;
     background-color: blueviolet;
     justify-content: right;
     width: 40%;
+    padding-right: 3rem;
 }
 
 nav a {
