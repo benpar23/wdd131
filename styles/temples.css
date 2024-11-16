@@ -3,7 +3,6 @@
 }
 
 
-
 header {
     display: flex;
     justify-content: space-between;
@@ -13,6 +12,7 @@ header {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     color: white;
+    position: relative;
 }
 
 h1 {
@@ -20,23 +20,52 @@ h1 {
 }
 
 nav {
-    flex-grow: 1;
-    display: flex;
     background-color: blueviolet;
-    justify-content: right;
-    width: 40%;
-    padding-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0.1rem; /* Adjusted to prevent overflow and ensure space below the header */
+    left: 0;
+    right: 0;
+    align-items: center;
+    width: 100%;
+}
+
+/* small view navigation */
+#menu {
+    font-size: 2rem;
+    border: 0;
+    background: none;
+    color: white;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    z-index: 10;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "X";
 }
 
 nav a {
     display: none;
     text-decoration: none;
     color: white;
-    margin: 0 20px;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    font-size: 1.25rem;
 }
 
 nav a:hover {
     text-decoration: underline 0.5px;
+}
+
+.open a {
+    display: block;
 }
 
 body {
@@ -59,9 +88,12 @@ h2 {
 
 .images {
     display: grid;
-    grid-template-columns: 1fr;
-    /* grid-gap: 20px; */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 25px;
+    place-items: center;
+    width: 70%;
 }
+
 
 footer {
     text-align: center;
