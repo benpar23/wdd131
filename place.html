@@ -7,6 +7,9 @@
     <meta name="description" content="A beautiful depiction of data based on the country of Guatemala">
     <meta name="author" content="Ben Parada">
     <link rel="stylesheet" href="styles/place.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
     <script src="scripts/place.js" defer></script>
 </head>
 <body>
@@ -16,11 +19,12 @@
     <main>
         <div class="hero">
             <picture>
-                <source srcset="" media="min-width: 1000">
-                <img src="" alt="" width="" height="">
+                <source srcset="images/guatemala-large.webp" media="(min-width: 1000px)">
+                <img src="images/guatemala-mobile.webp" alt="Picture of a landscape over a city in Guatemala." width="800" height="auto">
             </picture>
         </div>
         <section class="dataset">
+            <h2>Data</h2>
             <div class="row">
                 <div class="col">Area:</div>
                 <div class="col">Value</div>
@@ -47,6 +51,8 @@
             </div>
         </section>
         <section class="weather">
+            <h2>Weather</h2>
+            <img src="images/rain-cloud.svg" alt="A rain cloud SVG" class="mobile" width="200">
             <div class="row">
                 <div class="col">Temperature:</div>
                 <div class="col">Value</div>
