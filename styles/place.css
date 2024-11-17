@@ -1,4 +1,4 @@
-/* "🌧️" */
+/* "" */
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +13,10 @@ header {
     padding: 1rem;
     text-align: center;
     width: 100%;
+}
+
+h1 {
+    font-size: 2.5rem;
 }
 
 body {
@@ -35,6 +39,10 @@ h2 {
 img {
     display: block;
     margin: auto;
+}
+
+.hero img {
+    width: 100%;
 }
 
 .dataset {
@@ -76,4 +84,42 @@ footer {
     background-color: skyblue;
     width: 100%;
     padding: 1rem;
+}
+
+/* larger screen */
+
+@media screen and (min-width: 700px) {
+    .dataset {
+        position: absolute;
+        background-color: rgba(255,255,255,0.7);
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .dataset h2 {
+        text-align: left;
+        background-color: rgba(135, 206, 235,0.7);
+        width: 100%;
+    }
+
+    .weather {
+        position: absolute;
+        right: 8rem;
+        bottom: 1rem;
+        background-color: rgba(255,255,255,0.8);
+    }
+
+    .weather img {
+        display: none;
+    }
+
+    .weather h2 {
+        text-align: left;
+        background-color: rgba(135, 206, 235,0.8);
+        width: 100%;
+    }
+
+    .weather h2::after {
+        content: "🌧️"
+    }
 }
