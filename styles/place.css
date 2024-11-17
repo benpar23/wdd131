@@ -65,7 +65,7 @@ img {
     padding-bottom: 0.5rem;
 }
 
-.col:first-child{
+.col:first-child {
     font-weight: 1000;
     padding-right: 0.5rem
 }
@@ -88,17 +88,17 @@ footer {
 
 /* larger screen */
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
     .dataset {
         position: absolute;
-        background-color: rgba(255,255,255,0.7);
+        background-color: rgba(255, 255, 255, 0.7);
         padding: 1rem;
         margin: 1rem;
     }
 
     .dataset h2 {
         text-align: left;
-        background-color: rgba(135, 206, 235,0.7);
+        background-color: rgba(135, 206, 235, 0.7);
         width: 100%;
     }
 
@@ -106,7 +106,7 @@ footer {
         position: absolute;
         right: 8rem;
         bottom: 1rem;
-        background-color: rgba(255,255,255,0.8);
+        background-color: rgba(255, 255, 255, 0.8);
     }
 
     .weather img {
@@ -115,7 +115,7 @@ footer {
 
     .weather h2 {
         text-align: left;
-        background-color: rgba(135, 206, 235,0.8);
+        background-color: rgba(135, 206, 235, 0.8);
         width: 100%;
     }
 
