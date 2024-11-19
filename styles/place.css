@@ -45,6 +45,10 @@ img {
     width: 100%;
 }
 
+.weather img {
+    width: 10em;
+}
+
 .dataset {
     /* width: 80%; */
     /* border: 1px solid black; */
@@ -89,11 +93,15 @@ footer {
 /* larger screen */
 
 @media screen and (min-width: 800px) {
+    .hero {
+        position: relative;
+    }
+    
     .dataset {
         position: absolute;
         background-color: rgba(255, 255, 255, 0.7);
-        padding: 1rem;
-        margin: 1rem;
+        top: 1rem;
+        left: 4rem;
     }
 
     .dataset h2 {
@@ -104,9 +112,9 @@ footer {
 
     .weather {
         position: absolute;
-        right: 8rem;
+        right: 4rem;
         bottom: 1rem;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 0.7);
     }
 
     .weather img {

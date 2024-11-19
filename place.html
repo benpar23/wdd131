@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
     <script src="scripts/place.js" defer></script>
 </head>
+
 <body>
     <header>
         <h1>Guatemala</h1>
@@ -22,58 +24,59 @@
                 <source srcset="images/guatemala-large.webp" media="(min-width: 1000px)">
                 <img src="images/guatemala-mobile.webp" alt="Picture of a landscape over a city in Guatemala." width="400" height="auto">
             </picture>
+            <section class="dataset">
+                <h2>Data</h2>
+                <div class="row">
+                    <div class="col">Area:</div>
+                    <div class="col">108,890 km²</div>
+                </div>
+                <div class="row">
+                    <div class="col">Population:</div>
+                    <div class="col">17,600,000</div>
+                </div>
+                <div class="row">
+                    <div class="col">Capital:</div>
+                    <div class="col">Guatemala City</div>
+                </div>
+                <div class="row">
+                    <div class="col">Languages:</div>
+                    <div class="col">Spanish</div>
+                </div>
+                <div class="row">
+                    <div class="col">Currency:</div>
+                    <div class="col">Quetzal</div>
+                </div>
+                <div class="row">
+                    <div class="col">Time Zone:</div>
+                    <div class="col">UTC-6</div>
+                </div>
+            </section>
+            <section class="weather">
+                <h2>Weather</h2>
+                <img src="images/rain-cloud.svg" alt="A rain cloud SVG" class="mobile" width="200">
+                <div class="row">
+                    <div class="col">Temperature:</div>
+                    <div class="col temp">18 °C</div>
+                </div>
+                <div class="row">
+                    <div class="col">Conditions:</div>
+                    <div class="col">Rainy</div>
+                </div>
+                <div class="row">
+                    <div class="col">Wind:</div>
+                    <div class="col wind">18 km/h</div>
+                </div>
+                <div class="row">
+                    <div class="col">Wind Chill:</div>
+                    <div class="col chill"></div>
+                </div>
+            </section>
         </div>
-        <section class="dataset">
-            <h2>Data</h2>
-            <div class="row">
-                <div class="col">Area:</div>
-                <div class="col">Value</div>
-            </div>
-            <div class="row">
-                <div class="col">Population:</div>
-                <div class="col">Value</div>
-            </div>
-            <div class="row">
-                <div class="col">Capital:</div>
-                <div class="col">Guatemala City</div>
-            </div>
-            <div class="row">
-                <div class="col">Languages:</div>
-                <div class="col">Spanish</div>
-            </div>
-            <div class="row">
-                <div class="col">Currency:</div>
-                <div class="col">Quetzal</div>
-            </div>
-            <div class="row">
-                <div class="col">Time Zone:</div>
-                <div class="col">UTC-6</div>
-            </div>
-        </section>
-        <section class="weather">
-            <h2>Weather</h2>
-            <img src="images/rain-cloud.svg" alt="A rain cloud SVG" class="mobile" width="200">
-            <div class="row">
-                <div class="col">Temperature:</div>
-                <div class="col">Value</div>
-            </div>
-            <div class="row">
-                <div class="col">Conditions:</div>
-                <div class="col">Value</div>
-            </div>
-            <div class="row">
-                <div class="col">Wind:</div>
-                <div class="col">Value</div>
-            </div>
-            <div class="row">
-                <div class="col">Wind Chill:</div>
-                <div class="col wind" ></div>
-            </div>
-        </section>
     </main>
     <footer>
         <p>&copy; <span id="currentyear"></span> - Ben Parada - Toronto, Canada</p>
         <p id="lastModified"></p>
     </footer>
 </body>
+
 </html>
