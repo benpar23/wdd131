@@ -10,6 +10,7 @@
     --secondary-color: white;
     --primary-transparent: rgba(135, 206, 235, 0.7);
     --secondary-transparent: rgba(255, 255, 255, 0.7);
+    --tertiary-transparent: rgba(6, 6, 179, 0.7);
 }
 
 header {
@@ -108,10 +109,11 @@ footer {
 
     .dataset h2 {
         text-align: left;
-        background-color: var(--primary-transparent);
+        background-color: var(--tertiary-transparent);
         width: 100%;
         position: relative;
         transform: translateX(-15%);
+        color: var(--secondary-color);
     }
 
     .weather {
@@ -127,10 +129,11 @@ footer {
 
     .weather h2 {
         text-align: left;
-        background-color: var(--primary-transparent);
+        background-color: var(--tertiary-transparent);
         width: 100%;
         position: relative;
         transform: translateX(-15%);
+        color: var(--secondary-color);
     }
 
     .weather h2::after {
