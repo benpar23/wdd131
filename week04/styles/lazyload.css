@@ -1,0 +1,14 @@
+h1 {
+    text-align: center;
+}
+
+main {
+    display: grid;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+img {
+    display: block;
+    padding: 1rem;
+}
