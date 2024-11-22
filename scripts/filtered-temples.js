@@ -131,6 +131,14 @@ temples.forEach(temple => {
 
 	templeLocation.appendChild(locationName);
 
+	templeCard.appendChild(templeLocation);
+
+	const templeDedication = document.createElement("div");
+
+	templeDedication.className = "row";
+
+	
+
 	const templeImage = document.createElement("img");
 
 	templeImage.src = temple.imageUrl;

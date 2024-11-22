@@ -105,6 +105,22 @@ h2 {
     padding: 0.5rem;
 }
 
+.row {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.row h4 {
+    color: purple;
+    font-size: 0.8rem;
+    padding: 0.75rem;
+}
+
 footer {
     text-align: center;
     background-color: blueviolet;
