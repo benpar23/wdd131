@@ -105,6 +105,8 @@ const templeList = document.querySelector(".images");
 temples.forEach(temple => {
 	const templeCard = document.createElement("div");
 
+	templeCard.className = "card";
+
 	templeList.appendChild(templeCard);
 
 	const templeName = document.createElement("h3");
