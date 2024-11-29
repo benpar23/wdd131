@@ -39,7 +39,7 @@ const temples = [
 		dedicated: "2015, June, 7",
 		area: 96630,
 		imageUrl:
-			"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+			"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x250/payson-utah-temple-exterior-1416671-wallpaper.jpg"
 	},
 	{
 		templeName: "Yigo Guam",
@@ -102,49 +102,103 @@ const temples = [
 
 const templeList = document.querySelector(".images");
 
-temples.forEach(temple => {
-	const templeCard = document.createElement("div");
+createTempleCard(temples);
 
-	templeCard.className = "card";
+function createTempleCard(filteredTemples) {
 
-	templeList.appendChild(templeCard);
+	templeList.innerHTML = "";
 
-	const templeName = document.createElement("h3");
+	filteredTemples.forEach(temple => {
+		const templeCard = document.createElement("div");
 
-	templeName.textContent = temple.templeName;
+		templeCard.className = "card";
 
-	templeCard.appendChild(templeName);
+		templeList.appendChild(templeCard);
 
-	const templeLocation = document.createElement("div");
+		const templeName = document.createElement("h3");
 
-	templeLocation.className = "row";
+		templeName.textContent = temple.templeName;
 
-	templeLocation.innerHTML = `<span>LOCATION:</span> ${temple.location}`;
+		templeCard.appendChild(templeName);
 
-	templeCard.appendChild(templeLocation);
+		const templeLocation = document.createElement("div");
 
-	const templeDedication = document.createElement("div");
+		templeLocation.className = "row";
 
-	templeDedication.className = "row";
+		templeLocation.innerHTML = `<span>LOCATION:</span> ${temple.location}`;
 
-	templeDedication.innerHTML = `<span>DEDICATED:</span> ${temple.dedicated}`;
+		templeCard.appendChild(templeLocation);
 
-	templeCard.appendChild(templeDedication);
+		const templeDedication = document.createElement("div");
 
-	const templeSize = document.createElement("div");
+		templeDedication.className = "row";
 
-	templeSize.className = "row";
+		templeDedication.innerHTML = `<span>DEDICATED:</span> ${temple.dedicated}`;
 
-	templeSize.innerHTML = `<span>SIZE:</span> ${temple.area} sq ft`;
+		templeCard.appendChild(templeDedication);
 
-	templeCard.appendChild(templeSize);
+		const templeSize = document.createElement("div");
 
-	const templeImage = document.createElement("img");
+		templeSize.className = "row";
 
-	templeImage.src = temple.imageUrl;
-	templeImage.alt = `Image of the ${temple.templeName} Temple`
-	// templeImage.width = "300";
-	templeImage.loading = "lazy";
+		templeSize.innerHTML = `<span>SIZE:</span> ${temple.area} sq ft`;
 
-	templeCard.appendChild(templeImage);
-})
+		templeCard.appendChild(templeSize);
+
+		const templeImage = document.createElement("img");
+
+		templeImage.src = temple.imageUrl;
+		templeImage.alt = `Image of the ${temple.templeName} Temple`;
+		// templeImage.width = "300";
+		templeImage.loading = "lazy";
+
+		templeCard.appendChild(templeImage);
+	})
+}
+
+const home = document.querySelector("#home");
+const oldTemples = document.querySelector("#old");
+const newTemples = document.querySelector("#new");
+const largeTemples = document.querySelector("#large");
+const smallTemples = document.querySelector("#small");
+
+const page = document.querySelector("#currentPage");
+
+oldTemples.addEventListener('click', () => {
+
+	page.textContent = "Old";
+
+	let date = new Date("1900-01-01");
+
+	createTempleCard(temples.filter(temple => new Date(temple.dedicated) < date));
+});
+
+home.addEventListener('click', () => {
+
+	page.textContent = "Home";
+
+	createTempleCard(temples);
+});
+
+newTemples.addEventListener('click', () => {
+
+	page.textContent = "New";
+
+	let date = new Date("2000-12-31");
+
+	createTempleCard(temples.filter(temple => new Date(temple.dedicated) > date));
+});
+
+largeTemples.addEventListener('click', () => {
+
+	page.textContent = "Large";
+
+	createTempleCard(temples.filter(temple => parseInt(temple.area) > 90000));
+});
+
+smallTemples.addEventListener('click', () => {
+
+	page.textContent = "Small";
+
+	createTempleCard(temples.filter(temple => parseInt(temple.area) < 10000));
+});
