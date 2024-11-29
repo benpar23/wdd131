@@ -93,11 +93,14 @@ h2 {
     grid-gap: 25px;
     place-items: center;
     width: 80%;
+    align-items: stretch;
 }
 
 .card {
     background-color: rgb(244, 236, 227);
     padding: 1rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .card h3 {
@@ -111,6 +114,9 @@ h2 {
     grid-template-rows: 1fr;
     align-items: center;
     text-align: left;
+    height: 2rem;
+    white-space: nowrap;
+    padding-bottom: 1rem;
 }
 
 .card span {
@@ -118,6 +124,11 @@ h2 {
     font-size: 0.8rem;
     text-align: right;
     padding-right: 0.4rem;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
 }
 
 footer {

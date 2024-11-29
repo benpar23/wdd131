@@ -119,21 +119,7 @@ temples.forEach(temple => {
 
 	templeLocation.className = "row";
 
-	const locationSpan = document.createElement("span");
-
-	templeLocation.appendChild(locationSpan);
-
-	const locationTitle = document.createElement("p");
-
-	locationTitle.textContent = "LOCATION:"
-
-	locationSpan.appendChild(locationTitle);
-
-	const locationName = document.createElement("p");
-
-	locationName.textContent = temple.location;
-
-	templeLocation.appendChild(locationName);
+	templeLocation.innerHTML = `<span>LOCATION:</span> ${temple.location}`;
 
 	templeCard.appendChild(templeLocation);
 
@@ -141,17 +127,24 @@ temples.forEach(temple => {
 
 	templeDedication.className = "row";
 
-	const dedicationSpan = document.createElement("span");
+	templeDedication.innerHTML = `<span>DEDICATED:</span> ${temple.dedicated}`;
 
-	templeDedication.appendChild(dedicationSpan);
+	templeCard.appendChild(templeDedication);
 
+	const templeSize = document.createElement("div");
 
+	templeSize.className = "row";
+
+	templeSize.innerHTML = `<span>SIZE:</span> ${temple.area} sq ft`;
+
+	templeCard.appendChild(templeSize);
 
 	const templeImage = document.createElement("img");
 
 	templeImage.src = temple.imageUrl;
 	templeImage.alt = `Image of the ${temple.templeName} Temple`
-	templeImage.width = "300";
+	// templeImage.width = "300";
+	templeImage.loading = "lazy";
 
 	templeCard.appendChild(templeImage);
 })
