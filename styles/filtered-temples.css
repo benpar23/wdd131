@@ -85,15 +85,18 @@ main {
 
 h2 {
     text-align: center;
+    padding-bottom: 2rem;
 }
 
 .images {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 0.7fr));
+    gap: 20px;
     place-items: center;
-    width: 80%;
+    width: 90%;
     align-items: stretch;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .card {
@@ -101,6 +104,8 @@ h2 {
     padding: 1rem;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    max-width: 90%;
 }
 
 .card h3 {
@@ -119,9 +124,12 @@ h2 {
 }
 
 .card img {
-    height: 200px;
-    object-fit: cover;
+    /* height: 200px;
+    object-fit: cover; */
     padding-top: 1rem;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 footer {

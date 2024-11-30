@@ -149,7 +149,6 @@ function createTempleCard(filteredTemples) {
 
 		templeImage.src = temple.imageUrl;
 		templeImage.alt = `Image of the ${temple.templeName} Temple`;
-		// templeImage.width = "300";
 		templeImage.loading = "lazy";
 
 		templeCard.appendChild(templeImage);
