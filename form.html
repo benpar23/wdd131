@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description" content="A web form designed to allow customers to review our products.">
+    <meta name="author" content="Ben Parada">
+    <link rel="stylesheet" href="styles/form.css">
+    <script defer src="scripts/form.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html">
+            <label>
+                Product Name
+                <select id="product" name="product" required>
+                    <option value="placeholder" disabled selected>Select A Product...</option>
+                </select>
+            </label>
+
+            <div>Overall Rating</div>
+            <label>&star;<input type="radio" id="rating" name="rating" value="one"></label>
+            <label>&star;&star;<input type="radio" id="rating" name="rating" value="two"></label>
+            <label>&star;&star;&star;<input type="radio" id="rating" name="rating" value="three"></label>
+            <label>&star;&star;&star;&star;<input type="radio" id="rating" name="rating" value="four"></label>
+            <label>&star;&star;&star;&star;&star;<input type="radio" id="rating" name="rating" value="five"></label>
+
+            <label>Installation Date<input type="date" id="installed" name="installed" required></label>
+
+            
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> - Ben Parada - Toronto, Canada</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
