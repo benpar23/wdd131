@@ -1,8 +1,14 @@
-label, textarea, select, input[type="text"], input[type="date"] {
+textarea, select, input[type="text"], input[type="date"] {
     display: block;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 1rem;;
 }
 
 label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
@@ -14,12 +20,19 @@ label {
 
 .stars {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0.5rem;
     max-width: 600px;
 }
 
 .stars label {
-    justify-items: center;
+    /* justify-items: center; */
+}
+
+#product {
+    display: block;
 }
 
 
