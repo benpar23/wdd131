@@ -1,0 +1,25 @@
+label, textarea, select, input[type="text"], input[type="date"] {
+    display: block;
+}
+
+label {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#rating {
+    display: block;
+    padding: 1rem;
+}
+
+.stars {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+}
+
+.stars label {
+    justify-items: center;
+}
+
+

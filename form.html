@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="styles/form.css">
     <script defer src="scripts/form.js"></script>
 </head>
+
 <body>
     <header>
         <h1>Product Review</h1>
@@ -23,15 +25,31 @@
             </label>
 
             <div>Overall Rating</div>
-            <label>&star;<input type="radio" id="rating" name="rating" value="one"></label>
-            <label>&star;&star;<input type="radio" id="rating" name="rating" value="two"></label>
-            <label>&star;&star;&star;<input type="radio" id="rating" name="rating" value="three"></label>
-            <label>&star;&star;&star;&star;<input type="radio" id="rating" name="rating" value="four"></label>
-            <label>&star;&star;&star;&star;&star;<input type="radio" id="rating" name="rating" value="five"></label>
+            <div class="stars">   
+                <label>&star;<input type="radio" id="rating" name="rating" value="one"></label>
+                <label>&star;&star;<input type="radio" id="rating" name="rating" value="two"></label>
+                <label>&star;&star;&star;<input type="radio" id="rating" name="rating" value="three"></label>
+                <label>&star;&star;&star;&star;<input type="radio" id="rating" name="rating" value="four"></label>
+                <label>&star;&star;&star;&star;&star;<input type="radio" id="rating" name="rating" value="five"></label>
+            </div>
 
             <label>Installation Date<input type="date" id="installed" name="installed" required></label>
 
-            
+            <div>What features did you find useful in the product? <span id="featureSpan">Check all that apply</span>
+            </div>
+            <label><input type="checkbox" id="feature" name="durability" value="durability"> Durability</label>
+            <label><input type="checkbox" id="feature" name="ease" value="ease"> Ease of Use</label>
+            <label><input type="checkbox" id="feature" name="performance" value="performance"> Performance</label>
+            <label><input type="checkbox" id="feature" name="design" value="design"> Design</label>
+
+            <label>Written Review <span id="optional">Optional</span><textarea id="review"
+                    name="review"></textarea></label>
+
+            <label>Your Name <span id="optional">Optional</span><input type="text" id="name" name="name"></label>
+
+            <label><input type="submit" value="Post Review"></label>
+
+
         </form>
     </main>
     <footer>
@@ -39,4 +57,5 @@
         <p id="lastModified"></p>
     </footer>
 </body>
+
 </html>
