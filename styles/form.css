@@ -28,11 +28,20 @@ label {
 }
 
 .stars label {
-    /* justify-items: center; */
+    text-align: center;
 }
 
 #product {
     display: block;
 }
 
+#optional {
+    font-size: 0.8rem;
+    color: blue;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100px;
+}
 
