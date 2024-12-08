@@ -1,8 +1,12 @@
 textarea, select, input[type="text"], input[type="date"] {
     display: block;
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
     margin-bottom: 1rem;
+}
+
+textarea, input[type="text"] {
+    padding-bottom: 1rem;
 }
 
 label {
@@ -14,8 +18,13 @@ label {
     padding-left: 1rem;
 }
 
+label > span {
+    display: inline;
+}
+
 div {
     padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 
@@ -30,15 +39,17 @@ div {
     justify-content: space-evenly;
     align-items: center;
     gap: 0.5rem;
-    max-width: 600px;
+    max-width: 350px;
 }
 
 .stars label {
     text-align: center;
 }
 
-#product {
+#features {
     display: block;
+    padding: 0.2rem;
+    padding-left: 1rem;
 }
 
 #optional {
@@ -46,14 +57,23 @@ div {
     color: blue;
 }
 
+#featureSpan {
+    font-style: italic;
+}
+
 input[type="submit"] {
-    display: inline-block;
-    width: 100px;
+    display: block;
+    width: 350px;
     height: 40px;
     text-align: center;
 }
 
+
 body {
+    margin: 0;
+}
+
+p {
     margin: 0;
 }
 

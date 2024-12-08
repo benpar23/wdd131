@@ -18,34 +18,40 @@
     <main>
         <form method="get" action="review.html">
             <label>
-                Product Name
+                Product Name*
                 <select id="product" name="product" required>
                     <option value="placeholder" disabled selected>Select A Product...</option>
                 </select>
             </label>
 
             <div>Overall Rating</div>
-            <div class="stars">   
-                <label>&star;<input type="radio" id="rating" name="rating" value="one"></label>
-                <label>&star;&star;<input type="radio" id="rating" name="rating" value="two"></label>
-                <label>&star;&star;&star;<input type="radio" id="rating" name="rating" value="three"></label>
-                <label>&star;&star;&star;&star;<input type="radio" id="rating" name="rating" value="four"></label>
-                <label>&star;&star;&star;&star;&star;<input type="radio" id="rating" name="rating" value="five"></label>
+            <div class="stars">
+                <label>&star;<input type="radio" id="one" name="rating" value="one"></label>
+                <label>&star;&star;<input type="radio" id="two" name="rating" value="two"></label>
+                <label>&star;&star;&star;<input type="radio" id="three" name="rating" value="three"></label>
+                <label>&star;&star;&star;&star;<input type="radio" id="four" name="rating" value="four"></label>
+                <label>&star;&star;&star;&star;&star;<input type="radio" id="five" name="rating" value="five"></label>
             </div>
 
-            <label>Installation Date<input type="date" id="installed" name="installed" required></label>
+            <label>Date of Installation*<input type="date" id="installed" name="installed" required></label>
 
-            <div>What features did you find useful in the product? <span id="featureSpan">Check all that apply</span>
+            <div>What features did you find useful in the product? <span id="featureSpan">(Check all that apply)</span>
             </div>
-            <label id="product"><input type="checkbox" id="feature" name="durability" value="durability"> Durability</label>
-            <label id="product"><input type="checkbox" id="feature" name="ease" value="ease"> Ease of Use</label>
-            <label id="product"><input type="checkbox" id="feature" name="performance" value="performance"> Performance</label>
-            <label id="product"><input type="checkbox" id="feature" name="design" value="design"> Design</label>
+            <label id="features"><input type="checkbox" id="feature" name="durability" value="durability">
+                Durability</label>
+            <label id="features"><input type="checkbox" id="feature" name="ease" value="ease"> Ease of Use</label>
+            <label id="features"><input type="checkbox" id="feature" name="performance" value="performance">
+                Performance</label>
+            <label id="features"><input type="checkbox" id="feature" name="design" value="design"> Design</label>
 
-            <label>Written Review <span id="optional">&#40Optional&#41</span><textarea id="review"
-                    name="review"></textarea></label>
+            <label id="written">
+                <p>Written Review <span id="optional">&#40Optional&#41</span></p><textarea id="review"
+                    name="review"></textarea>
+            </label>
 
-            <label>Your Name <span id="optional">&#40Optional&#41</span><input type="text" id="name" name="name"></label>
+            <label id="written">
+                <p>Your Name <span id="optional">&#40Optional&#41</span></p><input type="text" id="name" name="name">
+            </label>
 
             <label><input type="submit" value="Post Review"></label>
 
