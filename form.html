@@ -20,7 +20,7 @@
             <label>
                 Product Name*
                 <select id="product" name="select" required>
-                    <option value="placeholder" disabled selected>Select A Product...</option>
+                    <option disabled selected>Select A Product...</option>
                 </select>
             </label>
 
@@ -35,22 +35,25 @@
 
             <label>Date of Installation*<input type="date" id="installed" name="installed" required></label>
 
-            <div>What features did you find useful in the product? <span id="featureSpan">(Check all that apply)</span>
+            <div>What features did you find useful in the product? <span class="featureSpan">(Check all that
+                    apply)</span>
             </div>
-            <label id="features"><input type="checkbox" id="feature" name="durability" value="durability">
+            <label class="features"><input type="checkbox" id="feature1" name="features" value="durability">
                 Durability</label>
-            <label id="features"><input type="checkbox" id="feature" name="ease" value="ease"> Ease of Use</label>
-            <label id="features"><input type="checkbox" id="feature" name="performance" value="performance">
+            <label class="features"><input type="checkbox" id="feature2" name="features" value="ease"> Ease of
+                Use</label>
+            <label class="features"><input type="checkbox" id="feature3" name="features" value="performance">
                 Performance</label>
-            <label id="features"><input type="checkbox" id="feature" name="design" value="design"> Design</label>
+            <label class="features"><input type="checkbox" id="feature4" name="features" value="design"> Design</label>
 
-            <label id="written">
-                <p>Written Review <span id="optional">&#40Optional&#41</span></p><textarea id="review"
+            <label class="written">
+                <p>Written Review <span class="optional">&#40;Optional&#41;</span></p><textarea id="review"
                     name="review"></textarea>
             </label>
 
-            <label id="written">
-                <p>Your Name <span id="optional">&#40Optional&#41</span></p><input type="text" id="name" name="name">
+            <label class="written">
+                <p>Your Name <span class="optional">&#4;0Optional&#41;</span></p><input type="text" id="name"
+                    name="name">
             </label>
 
             <label><input type="submit" value="Post Review" id="button"></label>

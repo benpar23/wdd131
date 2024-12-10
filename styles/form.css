@@ -21,10 +21,6 @@ label > span {
     display: inline;
 }
 
-#rating {
-    display: block;
-}
-
 .stars {
     display: flex;
     flex-direction: row;
@@ -37,17 +33,17 @@ label > span {
     text-align: center;
 }
 
-#features {
+.features {
     display: block;
     padding: 0.2rem;
 }
 
-#optional {
+.optional {
     font-size: 0.8rem;
     color: blue;
 }
 
-#featureSpan {
+.featureSpan {
     font-style: italic;
 }
 
