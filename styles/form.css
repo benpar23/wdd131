@@ -1,7 +1,7 @@
 textarea, select, input[type="text"], input[type="date"] {
     display: block;
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
     margin-bottom: 1rem;
 }
 
@@ -15,22 +15,16 @@ label {
     gap: 0.4rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    padding-left: 1rem;
 }
 
 label > span {
     display: inline;
 }
 
-div {
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
 
 
 #rating {
     display: block;
-    padding: 1rem;
 }
 
 .stars {
@@ -49,7 +43,6 @@ div {
 #features {
     display: block;
     padding: 0.2rem;
-    padding-left: 1rem;
 }
 
 #optional {
@@ -66,8 +59,8 @@ input[type="submit"] {
     width: 350px;
     height: 40px;
     text-align: center;
+    align-self: center;
 }
-
 
 body {
     margin: 0;
@@ -79,9 +72,18 @@ p {
 
 main {
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
     padding: 0;
-    width: 80%;
+    width: 90%;
+    max-width: 500px;
     background-color: rgb(224, 224, 216);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
 }
 
 header {
