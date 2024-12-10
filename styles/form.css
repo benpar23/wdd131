@@ -17,8 +17,13 @@ label {
     padding-bottom: 1rem;
 }
 
-.written::after {
-    display: inline-flex;
+.written {
+    display: block;
+}
+
+.written span:first-of-type, .written span:last-of-type {
+    display: inline;
+    padding-bottom: 1rem;
 }
 
 .stars {
