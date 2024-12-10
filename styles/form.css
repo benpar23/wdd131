@@ -8,7 +8,7 @@ input[type="text"],
 input[type="date"] {
     display: block;
     width: 100%;
-    max-width: 280px;
+    max-width: 260px;
     margin-bottom: 1rem;
 }
 
@@ -84,7 +84,7 @@ main {
     padding-top: 1rem;
     padding-bottom: 1rem;
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     background-color: rgb(224, 224, 216);
 }
 
@@ -92,7 +92,7 @@ form {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
 }
 
 header {
