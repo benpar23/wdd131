@@ -45,8 +45,10 @@ const products = [
     selectForm.appendChild(option);
   })
 
-  const button = document.querySelector("#button");
+  const form = document.querySelector("#button");
 
-  button.addEventListener("click", () => {
+  form.addEventListener("submit", function () {
     
   })
+
+  localstorage

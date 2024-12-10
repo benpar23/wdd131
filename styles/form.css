@@ -1,7 +1,7 @@
 textarea, select, input[type="text"], input[type="date"] {
     display: block;
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
     margin-bottom: 1rem;
 }
 
@@ -108,4 +108,23 @@ footer {
 footer p {
     padding: 0.5rem;
     margin: 0;
+}
+
+/* larger screen view */
+
+@media only screen and (min-width: 700px) {
+    
+    main {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    form {
+        width: 90%;
+        max-width: 600px;
+    }
+
+    textarea, select, input[type="text"], input[type="date"] {
+        max-width: 600px;
+    }
 }
