@@ -17,8 +17,8 @@ label {
     padding-bottom: 1rem;
 }
 
-label > span {
-    display: inline;
+.written::after {
+    display: inline-flex;
 }
 
 .stars {
