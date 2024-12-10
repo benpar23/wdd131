@@ -1,3 +1,7 @@
+:root {
+    font-family: "Mona Sans", sans-serif;
+}
+
 textarea, select, input[type="text"], input[type="date"] {
     display: block;
     width: 100%;
