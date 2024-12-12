@@ -12,6 +12,35 @@ let pokemonList = [];
 
 let teamList = [];
 
+const displayPokemon = (poke) => {
+    pokebox.innerHTML = "";
+    
+    poke.forEach((character) => {
+        const divElement = document.createElement("div");
+
+        const h3Element = document.createElement("h3");
+        h3Element.innerText = character.name;
+
+        const imgElement = document.createElement("img");
+        imgElement.setAttribute("src", character.sprites.front_default);
+        imgElement.setAttribute("alt", character.name);
+
+        const buttonElement = document.createElement("button");
+        buttonElement.setAttribute("id", "favoritesButton");
+        buttonElement.textContent = "Add to favorites";
+        // buttonElement.addEventListener("click", () => {
+        //     favoritesList.push(character);
+        // })
+
+        divElement.appendChild(h3Element);
+        divElement.appendChild(imgElement);
+        divElement.appendChild(buttonElement);
+
+        pokebox.appendChild(divElement);
+    })
+}
+
+
 const getPokemon = async (pokemon) => {
     
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
@@ -19,11 +48,28 @@ const getPokemon = async (pokemon) => {
     if (response.ok){
         const characters = await response.json();
 
-        if (Array.isArray(characters.data)){
-            pokemonList = characters.data;
+        if (Array.isArray(characters)){
+            pokemonList = characters;
     } else {
-        pokemonList = [characters.data];
+        pokemonList = [characters];
     }}
 
-    displayDisneyChar(disneyList);    
+    displayPokemon(pokemonList);    
 }
+
+document.getElementById("search").addEventListener("keydown", event => {
+    if (event.key === "Enter") {
+        let pokemon = document.getElementById("search").value;
+        getPokemon(pokemon);
+    }
+})
+
+
+document.querySelector("#searchButton").addEventListener("click", () => {
+    let pokemonSearch = document.getElementById("search").value;
+    getPokemon(pokemonSearch);
+});
+
+// document.querySelector("#favoriteListButton").addEventListener("click", () => {
+//     displayFavorites(favoritesList)
+// })
