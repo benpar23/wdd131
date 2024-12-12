@@ -14,7 +14,7 @@ let teamList = [];
 
 const displayPokemon = (poke) => {
     pokebox.innerHTML = "";
-    
+
     poke.forEach((character) => {
         const divElement = document.createElement("div");
 
@@ -27,10 +27,10 @@ const displayPokemon = (poke) => {
 
         const buttonElement = document.createElement("button");
         buttonElement.setAttribute("id", "favoritesButton");
-        buttonElement.textContent = "Add to favorites";
-        // buttonElement.addEventListener("click", () => {
-        //     favoritesList.push(character);
-        // })
+        buttonElement.textContent = "Add to team";
+        buttonElement.addEventListener("click", () => {
+            teamList.push(character);
+        })
 
         divElement.appendChild(h3Element);
         divElement.appendChild(imgElement);
@@ -42,19 +42,49 @@ const displayPokemon = (poke) => {
 
 
 const getPokemon = async (pokemon) => {
-    
+
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
 
-    if (response.ok){
+    if (response.ok) {
         const characters = await response.json();
 
-        if (Array.isArray(characters)){
+        if (Array.isArray(characters)) {
             pokemonList = characters;
-    } else {
-        pokemonList = [characters];
-    }}
+        } else {
+            pokemonList = [characters];
+        }
+    }
 
-    displayPokemon(pokemonList);    
+    displayPokemon(pokemonList);
+}
+
+const displayTeam = (teamMembers) => {
+    pokebox.innerHTML = "";
+
+    teamMembers.forEach((character, index) => {
+        const divElement = document.createElement("article");
+
+        const h3Element = document.createElement("h3");
+        h3Element.innerText = character.name;
+
+        const imgElement = document.createElement("img");
+        imgElement.setAttribute("src", character.sprites.front_default);
+        imgElement.setAttribute("alt", character.name);
+
+        const buttonElement = document.createElement("button");
+        buttonElement.setAttribute("id", "removeButton");
+        buttonElement.textContent = "Remove";
+        buttonElement.addEventListener("click", () => {
+            teamList.splice(index, 1);
+            displayFavorites(favoritesList);
+        })
+
+        divElement.appendChild(h3Element);
+        divElement.appendChild(imgElement);
+        divElement.appendChild(buttonElement);
+
+        pokebox.appendChild(divElement);
+    })
 }
 
 document.getElementById("search").addEventListener("keydown", event => {
@@ -70,6 +100,6 @@ document.querySelector("#searchButton").addEventListener("click", () => {
     getPokemon(pokemonSearch);
 });
 
-// document.querySelector("#favoriteListButton").addEventListener("click", () => {
-//     displayFavorites(favoritesList)
-// })
+document.querySelector("#favoriteListButton").addEventListener("click", () => {
+    displayTeam(teamList)
+})
