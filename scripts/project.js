@@ -10,7 +10,7 @@ lastModified.innerHTML = document.lastModified;
 
 let pokemonList = [];
 
-let teamList = [];
+let teamList = JSON.parse(localStorage.getItem("MyTeam")) || [];
 
 const displayPokemon = (poke) => {
     pokebox.innerHTML = "";
@@ -19,7 +19,9 @@ const displayPokemon = (poke) => {
         const divElement = document.createElement("div");
 
         const h3Element = document.createElement("h3");
-        h3Element.innerText = character.name;
+        const capitalized = character.name;
+        const capital = capitalized[0].toUpperCase() + capitalized.substring(1);
+        h3Element.innerText = capital;
 
         const imgElement = document.createElement("img");
         imgElement.setAttribute("src", character.sprites.front_default);
@@ -30,6 +32,7 @@ const displayPokemon = (poke) => {
         buttonElement.textContent = "Add to team";
         buttonElement.addEventListener("click", () => {
             teamList.push(character);
+            localStorage.setItem("MyTeam", JSON.stringify(teamList));
         })
 
         divElement.appendChild(h3Element);
@@ -62,10 +65,12 @@ const displayTeam = (teamMembers) => {
     pokebox.innerHTML = "";
 
     teamMembers.forEach((character, index) => {
-        const divElement = document.createElement("article");
+        const divElement = document.createElement("div");
 
         const h3Element = document.createElement("h3");
-        h3Element.innerText = character.name;
+        const capitalized = character.name;
+        const capital = capitalized[0].toUpperCase() + capitalized.substring(1);
+        h3Element.innerText = capital;
 
         const imgElement = document.createElement("img");
         imgElement.setAttribute("src", character.sprites.front_default);
@@ -76,7 +81,8 @@ const displayTeam = (teamMembers) => {
         buttonElement.textContent = "Remove";
         buttonElement.addEventListener("click", () => {
             teamList.splice(index, 1);
-            displayFavorites(favoritesList);
+            localStorage.setItem("MyTeam", JSON.stringify(teamList));
+            displayTeam(teamList);
         })
 
         divElement.appendChild(h3Element);
