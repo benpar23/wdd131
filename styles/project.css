@@ -181,7 +181,7 @@ label {
     text-align: center;
 }
 
-.features {
+.games {
     display: block;
     padding: 0.2rem;
 }
@@ -191,7 +191,7 @@ label {
     color: blue;
 }
 
-.featureSpan {
+.gameSpan {
     font-style: italic;
 }
 
