@@ -27,9 +27,51 @@
             <h2>What is Competitive VGC?</h2>
             <p>Competitive Pokemon, or more commonly Competitive VGC, is the official competitive circuit of Pokemon worldwide.</p>
         </div>
-        <form>
-            
-        </form>
+        <div id="form">
+            <h2>Interested in receiving tips and tricks every month?</h2>
+            <h3>Fill out this form to receive our monthly newsletter packed with the most up to date info on Competitive VGC!</h3>
+            <form id="productForm" method="get" action="review.html">
+                <label>
+                    Product Name*
+                    <select id="product" name="select" required>
+                        <option value="" disabled selected>Select A Product...</option>
+                    </select>
+                </label>
+
+                <div>What level of play are you at?</div>
+                <div class="stars">
+                    <label>Beginner<input type="radio" id="one" name="rating" value="one"></label>
+                    <label>Intermediate<input type="radio" id="two" name="rating" value="two"></label>
+                    <label>Advanced<input type="radio" id="three" name="rating" value="three"></label>
+                </div>
+
+                <label>Date of Installation*<input type="date" id="install" name="installDate" required></label>
+
+                <div>What features did you find useful in the product? <span class="featureSpan">(Check all that
+                        apply)</span>
+                </div>
+                <label class="features"><input type="checkbox" id="feature1" name="features" value="durability">
+                    Durability</label>
+                <label class="features"><input type="checkbox" id="feature2" name="features" value="ease"> Ease of
+                    Use</label>
+                <label class="features"><input type="checkbox" id="feature3" name="features" value="performance">
+                    Performance</label>
+                <label class="features"><input type="checkbox" id="feature4" name="features" value="design"> Design</label>
+
+                <label class="written">
+                    <span>Written Review</span> <span class="optional">&#40;Optional&#41;</span><textarea id="rev"
+                        name="review"></textarea>
+                </label>
+
+                <label class="written">
+                    <span>Your Name</span> <span class="optional">&#40;Optional&#41;</span><input type="text" id="name"
+                        name="fname">
+                </label>
+
+                <label><input type="submit" value="Post Review" id="button"></label>
+
+            </form>
+        </div>
     </main>
     <footer>
         <p>&copy; <span id="currentyear"></span> - Ben Parada - Toronto, Canada</p>

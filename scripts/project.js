@@ -12,6 +12,8 @@ let pokemonList = [];
 
 let teamList = JSON.parse(localStorage.getItem("MyTeam")) || [];
 
+let names = JSON.parse(localStorage.getItem("NameList")) || [];
+
 const displayPokemon = (poke) => {
     pokebox.innerHTML = "";
 
@@ -31,8 +33,16 @@ const displayPokemon = (poke) => {
         buttonElement.setAttribute("id", "favoritesButton");
         buttonElement.textContent = "Add to team";
         buttonElement.addEventListener("click", () => {
-            teamList.push(character);
-            localStorage.setItem("MyTeam", JSON.stringify(teamList));
+
+            if (names.length < 6) {
+                teamList.push(character);
+                names.push(character.name);
+                localStorage.setItem("MyTeam", JSON.stringify(teamList));
+                localStorage.setItem("NameList", JSON.stringify(names));
+            }
+            else {
+                alert("You already have six pokemon on your team. Try deleting some!")
+            }
         })
 
         divElement.appendChild(h3Element);
@@ -81,7 +91,9 @@ const displayTeam = (teamMembers) => {
         buttonElement.textContent = "Remove";
         buttonElement.addEventListener("click", () => {
             teamList.splice(index, 1);
+            names.splice(index, 1);
             localStorage.setItem("MyTeam", JSON.stringify(teamList));
+            localStorage.setItem("NameList", JSON.stringify(names));
             displayTeam(teamList);
         })
 
