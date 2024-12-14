@@ -28,6 +28,7 @@ const displayPokemon = (poke) => {
         const imgElement = document.createElement("img");
         imgElement.setAttribute("src", character.sprites.front_default);
         imgElement.setAttribute("alt", character.name);
+        imgElement.setAttribute("loading", "lazy")
 
         const buttonElement = document.createElement("button");
         buttonElement.setAttribute("id", "favoritesButton");
@@ -85,6 +86,7 @@ const displayTeam = (teamMembers) => {
         const imgElement = document.createElement("img");
         imgElement.setAttribute("src", character.sprites.front_default);
         imgElement.setAttribute("alt", character.name);
+        imgElement.setAttribute("loading", "lazy");
 
         const buttonElement = document.createElement("button");
         buttonElement.setAttribute("id", "removeButton");
@@ -119,5 +121,5 @@ document.querySelector("#searchButton").addEventListener("click", () => {
 });
 
 document.querySelector("#favoriteListButton").addEventListener("click", () => {
-    displayTeam(teamList)
+    displayTeam(teamList);
 })

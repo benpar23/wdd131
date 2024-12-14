@@ -117,6 +117,7 @@ iframe {
 
 #search {
     margin-right: 10px;
+    align-self: center;
 }
 
 #searchButton, #favoriteListButton {
@@ -132,6 +133,7 @@ iframe {
 #searchContainer {
     text-align: center;
     margin-bottom: 20px;
+    place-items: center;
 }
 
 textarea,
