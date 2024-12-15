@@ -226,3 +226,41 @@ footer p {
     margin: 0;
     padding: 0.25rem;
 }
+
+/* mobile view */
+
+@media only screen and (max-width: 600px) {
+
+    main {
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imageP {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imageP img {
+        padding: 0;
+        margin: 0;
+    }
+
+    .video div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    iframe {
+        border: 5px solid var(--primary-color);
+        width: 80%;
+        height: 35vh;
+        margin-bottom: 1rem;
+    }
+}
