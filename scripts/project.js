@@ -8,6 +8,14 @@ currentyear.innerHTML = today.getFullYear();
 
 lastModified.innerHTML = document.lastModified;
 
+const hamButton = document.querySelector('#menu');
+const navigation = document.querySelector('.navigation');
+
+hamButton.addEventListener('click', () => {
+	navigation.classList.toggle('open');
+	hamButton.classList.toggle('open');
+});
+
 if(window.location.pathname === `/search.html`){
     let pokemonList = [];
 
@@ -111,7 +119,7 @@ if(window.location.pathname === `/search.html`){
     document.getElementById("search").addEventListener("keydown", event => {
         if (event.key === "Enter") {
             let pokemon = document.getElementById("search").value;
-            getPokemon(pokemon);
+            getPokemon(pokemon.toLowerCase());
         }
     })
 
