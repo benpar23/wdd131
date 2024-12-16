@@ -77,6 +77,10 @@ h2 {
     align-self: center;
 }
 
+#blockDiv {
+    height: 4rem;
+}
+
 .video {
     text-align: center;
 }
@@ -212,6 +216,10 @@ input[type="submit"] {
     height: 40px;
     text-align: center;
     align-self: center;
+}
+
+section {
+    margin-bottom: 3rem;
 }
 
 form {
