@@ -44,7 +44,7 @@ nav a:hover, h1 a:hover {
 
 main {
     padding: 1rem;
-    width: 80%;
+    width: 70%;
     margin: 0.5rem auto;
     background-color: var(--secondary-color);
 }
