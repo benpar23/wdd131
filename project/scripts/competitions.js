@@ -17,9 +17,11 @@ tableCells.forEach(async (cell) => {
                 img.src = imgUrl;
                 img.alt = name;
                 img.title = name;
+                img.setAttribute('loading', 'lazy');
                 cell.appendChild(img);
             } else {
                 console.warn(`No image found for: ${name}`);
             }
     }
 });
+

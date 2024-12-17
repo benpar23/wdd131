@@ -57,18 +57,18 @@ h2 {
     text-align: center;
 }
 
-.searchTitle {
+.search-title {
     text-align: center;
 }
 
-.imageP {
+.image_p {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     align-items: center;
 }
 
-.imageP img {
+.image_p img {
     width: 80%;
     max-width: 500px;
     height: auto;
@@ -103,6 +103,10 @@ h2 {
     display: block;
 }
 
+.video img:last-of-type {
+    margin-top: 2rem;
+}
+
 .video div a {
     display: block;
     text-decoration: none;
@@ -111,6 +115,11 @@ h2 {
 
 .video div a:hover {
     text-decoration: underline;
+}
+
+.video-title {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
 }
 
 .competitions {
@@ -157,7 +166,7 @@ a:hover img {
     opacity: 0.7;
 }
 
-#pokebox {
+#pokemon-img {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 0.5fr));
     grid-gap: .5rem;
@@ -166,7 +175,7 @@ a:hover img {
     margin-bottom: 3rem;
 }
 
-#pokebox div {
+#pokemon-img div {
     height: 300px;
     margin: 0.5rem;
     padding: 0.5rem;
@@ -176,13 +185,13 @@ a:hover img {
     justify-content: center;
 }
 
-#pokebox h4 {
+#pokemon-img h4 {
     color: navy;
     font-size: smaller;
 }
 
 
-#pokebox img {
+#pokemon-img img {
     max-width: 100%;
     max-height: 150px;
     margin: 1rem;
@@ -193,7 +202,7 @@ a:hover img {
     align-self: center;
 }
 
-#searchButton, #teamListButton {
+#search-button, #team-list-button {
     width: 200px;
     padding: .5rem;
     background-color: #444;
@@ -203,7 +212,7 @@ a:hover img {
     cursor: pointer;
 }
 
-#searchContainer {
+#search-container {
     text-align: center;
     margin-bottom: 20px;
     place-items: center;
@@ -241,7 +250,7 @@ label {
     padding-bottom: 1rem;
 }
 
-.stars {
+.level {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -249,7 +258,7 @@ label {
     gap: 0.5rem;
 }
 
-.stars label {
+.level label {
     text-align: center;
 }
 
@@ -316,7 +325,7 @@ footer p {
         align-items: center;
     }
 
-    .imageP {
+    .image_p {
         display: flex;
         width: 100%;
         flex-direction: column;
@@ -324,7 +333,7 @@ footer p {
         align-items: center;
     }
 
-    .imageP img {
+    .image_p img {
         padding: 0;
         margin: 0;
         width: 80vw;

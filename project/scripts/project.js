@@ -23,10 +23,12 @@ if (window.location.pathname === `/project/search.html`) {
 
     let names = JSON.parse(localStorage.getItem("NameList")) || [];
 
-    const displayPokemon = (poke) => {
-        pokebox.innerHTML = "";
+    let pokemonImg = document.querySelector("#pokemon-img");
 
-        poke.forEach((character) => {
+    const displayPokemon = (pokemon) => {
+        pokemonImg.innerHTML = "";
+
+        pokemon.forEach((character) => {
             const divElement = document.createElement("div");
 
             const h3Element = document.createElement("h3");
@@ -40,7 +42,7 @@ if (window.location.pathname === `/project/search.html`) {
             imgElement.setAttribute("loading", "lazy")
 
             const buttonElement = document.createElement("button");
-            buttonElement.setAttribute("id", "favoritesButton");
+            buttonElement.setAttribute("id", "favorites-button");
             buttonElement.textContent = "Add to team";
             buttonElement.addEventListener("click", () => {
 
@@ -59,7 +61,7 @@ if (window.location.pathname === `/project/search.html`) {
             divElement.appendChild(imgElement);
             divElement.appendChild(buttonElement);
 
-            pokebox.appendChild(divElement);
+            pokemonImg.appendChild(divElement);
         })
     }
 
@@ -82,7 +84,7 @@ if (window.location.pathname === `/project/search.html`) {
     }
 
     const displayTeam = (teamMembers) => {
-        pokebox.innerHTML = "";
+        pokemonImg.innerHTML = "";
 
         teamMembers.forEach((character, index) => {
             const divElement = document.createElement("div");
@@ -98,7 +100,7 @@ if (window.location.pathname === `/project/search.html`) {
             imgElement.setAttribute("loading", "lazy");
 
             const buttonElement = document.createElement("button");
-            buttonElement.setAttribute("id", "removeButton");
+            buttonElement.setAttribute("id", "remove-button");
             buttonElement.textContent = "Remove";
             buttonElement.addEventListener("click", () => {
                 teamList.splice(index, 1);
@@ -112,7 +114,7 @@ if (window.location.pathname === `/project/search.html`) {
             divElement.appendChild(imgElement);
             divElement.appendChild(buttonElement);
 
-            pokebox.appendChild(divElement);
+            pokemonImg.appendChild(divElement);
         })
     }
 
@@ -124,12 +126,12 @@ if (window.location.pathname === `/project/search.html`) {
     })
 
 
-    document.querySelector("#searchButton").addEventListener("click", () => {
+    document.querySelector("#search-button").addEventListener("click", () => {
         let pokemonSearch = document.getElementById("search").value;
         getPokemon(pokemonSearch);
     });
 
-    document.querySelector("#teamListButton").addEventListener("click", () => {
+    document.querySelector("#team-list-button").addEventListener("click", () => {
         if (names.length > 0) {
             displayTeam(teamList);
         }
