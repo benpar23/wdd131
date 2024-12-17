@@ -16,7 +16,7 @@ hamButton.addEventListener('click', () => {
 	hamButton.classList.toggle('open');
 });
 
-if(window.location.pathname === `/search.html`){
+if(window.location.pathname === `/project/search.html`){
     let pokemonList = [];
 
     let teamList = JSON.parse(localStorage.getItem("MyTeam")) || [];

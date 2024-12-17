@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
     <meta name="author" content="Ben Parada">
     <link rel="stylesheet" href="styles/project.css">
     <script src="scripts/project.js" defer></script>
+    <script src="scripts/competitions.js" defer></script>
 </head>
+
 <body>
     <header>
         <h1><a href="project.html">Poke-Experts</a></h1>
@@ -19,68 +22,121 @@
             <a href="search.html">Pokemon Search</a>
         </nav>
     </header>
-    <main>
-        <div>
-            <h2>Recent Competitions</h2>
-            <p>Here you will find useful information on getting started or getting better with competitive Pokemon, also known as VGC.</p>
+    <main class="competitions">
+        <h1>Recent Competitions</h1>
+        <h2>2025 Toronto Regional Championships</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Record</th>
+                        <th>Country</th>
+                        <th>Player (Tag)</th>
+                        <th>Prize</th>
+                        <th>Team</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>9-2</td>
+                        <td>USA</td>
+                        <td>Wolfe Glick (Wolfey)</td>
+                        <td>$6,000 + 2025 Worlds Invite</td>
+                        <td class="team">Amoonguss,Incineroar,Kingdra,Gothitelle,Politoed,Archaludon</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>9-2</td>
+                        <td>ITA</td>
+                        <td>Marco Silva (marcofiero)</td>
+                        <td>$4,000</td>
+                        <td class="team">Jumpluff,Incineroar,Charizard,Torkoal,Porygon2,Ursaluna</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>10-1</td>
+                        <td>USA</td>
+                        <td>Chuppa Cross IV (Chuppa*Cross)</td>
+                        <td>$2,000</td>
+                        <td class="team">Indeedee Male,Volcarona,Annihilape,Sneasler,Tyranitar,Ursaluna Bloodmoon</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>10-1</td>
+                        <td>USA</td>
+                        <td>Giovanni Costa (Gio™)</td>
+                        <td>$2,000</td>
+                        <td class="team">Whimsicott,Incineroar,Dragonite,Sneasler,Gholdengo,Garchomp</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>9-2</td>
+                        <td>USA</td>
+                        <td>Benny Vasquez (Benny)</td>
+                        <td>$1,000</td>
+                        <td class="team">Rillaboom,Magmar,Basculegion Male,Sneasler,Ninetales Alola,Kingambit</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Rank</th>
-                    <th>Record</th>
-                    <th>Country</th>
-                    <th>Player (Tag)</th>
-                    <th>Prize</th>
-                    <th>Team</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>9-2</td>
-                    <td>USA</td>
-                    <td>Wolfe Glick (Wolfey)</td>
-                    <td>$6,000 + 2025 Worlds Invite</td>
-                    <td class="team">Amoonguss,Incineroar,Kingdra,Gothitelle,Politoed,Archaludon</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>9-2</td>
-                    <td>ITA</td>
-                    <td>Marco Silva (marcofiero)</td>
-                    <td>$4,000</td>
-                    <td class="team">Jumpluff,Incineroar,Charizard,Torkoal,Porygon2,Ursaluna</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>10-1</td>
-                    <td>USA</td>
-                    <td>Chuppa Cross IV (Chuppa*Cross)</td>
-                    <td>$2,000</td>
-                    <td class="team">Indeedee Male,Volcarona,Annihilape,Sneasler,Tyranitar,Ursaluna Bloodmoon</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>10-1</td>
-                    <td>USA</td>
-                    <td>Giovanni Costa (Gio™)</td>
-                    <td>$2,000</td>
-                    <td class="team">Whimsicott,Incineroar,Dragonite,Sneasler,Gholdengo,Garchomp</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>9-2</td>
-                    <td>USA</td>
-                    <td>Benny Vasquez (Benny)</td>
-                    <td>$1,000</td>
-                    <td class="team">Rillaboom,Magmar,Basculegion Male,Sneasler,Ninetales Alola,Kingambit</td>
-                </tr>
-            </tbody>
-        </table>
-        <div>
-            <h2>What is Competitive VGC?</h2>
-            <p>Competitive Pokemon, or more commonly Competitive VGC, is the official competitive circuit of Pokemon worldwide.</p>
+        <h2>2025 Sacramento Regional Championships</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Record</th>
+                        <th>Country</th>
+                        <th>Player (Tag)</th>
+                        <th>Prize</th>
+                        <th>Team</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>9-2</td>
+                        <td>USA</td>
+                        <td>Carson Confer (Carson)</td>
+                        <td>$6,000 + 2025 Worlds Invite</td>
+                        <td class="team">Talonflame,Incineroar,Indeedee Male,Sneasler,Electabuzz,Ursaluna Bloodmoon</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>9-2</td>
+                        <td>USA</td>
+                        <td>Joseph Ugarte (JoeUX9)</td>
+                        <td>$4,000</td>
+                        <td class="team">Jumpluff,Torkoal,Dragonite,Kingambit,Typhlosion Hisui,Garchomp</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>10-1</td>
+                        <td>CAN</td>
+                        <td>Marcus Dion (Father Dijon)</td>
+                        <td>$2,000</td>
+                        <td class="team">Talonflame,Incineroar,Indeedee Male,Sneasler,Electabuzz,Ursaluna Bloodmoon</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>9-2</td>
+                        <td>USA</td>
+                        <td>Akhil Goel (ChemCoop)</td>
+                        <td>$2,000</td>
+                        <td class="team">Amoonguss,Incineroar,Garchomp,Sneasler,Corviknight,Archaludon</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>10-1</td>
+                        <td>USA</td>
+                        <td>David Hutner (elegyy)</td>
+                        <td>$1,000</td>
+                        <td class="team">Amoonguss,Incineroar,Palafin Zero,Gholdengo,Pelipper,Hydreigon</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </main>
     <footer>
@@ -88,4 +144,5 @@
         <p id="lastModified"></p>
     </footer>
 </body>
+
 </html>
