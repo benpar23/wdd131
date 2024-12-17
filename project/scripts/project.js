@@ -12,11 +12,11 @@ const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('.navigation');
 
 hamButton.addEventListener('click', () => {
-	navigation.classList.toggle('open');
-	hamButton.classList.toggle('open');
+    navigation.classList.toggle('open');
+    hamButton.classList.toggle('open');
 });
 
-if(window.location.pathname === `/project/search.html`){
+if (window.location.pathname === `/project/search.html`) {
     let pokemonList = [];
 
     let teamList = JSON.parse(localStorage.getItem("MyTeam")) || [];
@@ -129,14 +129,20 @@ if(window.location.pathname === `/project/search.html`){
         getPokemon(pokemonSearch);
     });
 
-    document.querySelector("#favoriteListButton").addEventListener("click", () => {
-        displayTeam(teamList);
+    document.querySelector("#teamListButton").addEventListener("click", () => {
+        if (names.length > 0) {
+            displayTeam(teamList);
+        }
+        else {
+            alert("You have no Pokemon on your team yet. Try adding some!")
+        }
+
     })
 }
 
 const currentPath = window.location.pathname;
-if(currentPath.includes(`signup.html`)){
-    setTimeout(function() {
+if (currentPath.includes(`signup.html`)) {
+    setTimeout(function () {
         window.location.href = "project.html";
     }, 4000);
 }

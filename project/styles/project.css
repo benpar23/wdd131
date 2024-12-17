@@ -193,7 +193,7 @@ a:hover img {
     align-self: center;
 }
 
-#searchButton, #favoriteListButton {
+#searchButton, #teamListButton {
     width: 200px;
     padding: .5rem;
     background-color: #444;
@@ -261,6 +261,10 @@ label {
 .optional {
     font-size: 0.8rem;
     color: blue;
+}
+
+.signup {
+    text-align: center;
 }
 
 .gameSpan {
